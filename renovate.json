@@ -1,0 +1,15 @@
+{
+  "logLevel": "DEBUG",
+  "branchPrefix": "deps/",
+  "gitAuthor": "Renovate Bot <renovate-bot@opsteady.com>",
+  "onboarding": false,
+  "repositories": ["opsteady/opsteady"],
+  "regexManagers": [
+    {
+      "fileMatch": ["^Dockerfile$"],
+      "matchStrings": [
+        "datasource=(?<datasource>.*?) depName=(?<depName>.*?) (versioning=(?<versioning>.*?)\n)ENV .*?_VERSION=(?<currentValue>.*)"
+      ]
+    }
+  ]
+}
