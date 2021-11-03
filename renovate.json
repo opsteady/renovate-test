@@ -4,7 +4,6 @@
   "gitAuthor": "Self-hosted Renovate Bot <93674738+renovate-opsteady[bot]@users.noreply.github.com>",
   "onboarding": false,
   "repositories": ["opsteady/renovate-test"],
-  "enabledManagers": ["regex"],
   "regexManagers": [
     {
       "fileMatch": ["^Dockerfile$"],
