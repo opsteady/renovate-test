@@ -3,7 +3,7 @@
   "branchPrefix": "deps/",
   "gitAuthor": "Renovate Bot <renovate-bot@opsteady.com>",
   "onboarding": false,
-  "repositories": ["opsteady/opsteady"],
+  "repositories": ["opsteady/renovate-test"],
   "regexManagers": [
     {
       "fileMatch": ["^Dockerfile$"],
