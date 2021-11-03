@@ -1,8 +1,8 @@
 {
   "branchPrefix": "deps/",
-  "gitAuthor": "Renovate Bot <renovate-bot@opsteady.com>",
   "onboarding": false,
   "repositories": ["opsteady/renovate-test"],
+  "enabledManagers": ["regex"],
   "regexManagers": [
     {
       "fileMatch": ["^Dockerfile$"],
