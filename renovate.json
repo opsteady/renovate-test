@@ -2,7 +2,6 @@
   "branchPrefix": "deps/",
   "onboarding": false,
   "repositories": ["opsteady/renovate-test"],
-  "enabledManagers": ["regex"],
   "regexManagers": [
     {
       "fileMatch": ["^Dockerfile$"],
