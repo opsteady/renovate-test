@@ -4,12 +4,32 @@
   "gitAuthor": "Self-hosted Renovate Bot <93674738+renovate-opsteady[bot]@users.noreply.github.com>",
   "onboarding": false,
   "repositories": ["opsteady/renovate-test"],
+  "hostRules": [
+    {
+      "matchHost": "opsteadyos.azurecr.io",
+      "username": "<some-username>",
+      "password": "<some-password>"
+    }
+  ],
+  "packageRules": [
+    {
+      "matchDatasources": ["helm"],
+      "registryUrls": ["https://opsteadyos.azurecr.io/helm"]
+    }
+  ],
   "regexManagers": [
     {
       "fileMatch": ["^Dockerfile$"],
       "matchStringsStrategy": "any",
       "matchStrings": [
         "datasource=(?<datasource>.*?) depName=(?<depName>.*?) versioning=(?<versioning>.*?)\nENV .*?_VERSION=(?<currentValue>.*)"
+      ]
+    },
+    {
+      "fileMatch": ["^component.go$"],
+      "matchStringsStrategy": "any",
+      "matchStrings": [
+        "\\w+:\\s+\"(?<currentValue>.*?)\".+\/\/ renovate: datasource=(?<datasource>.*?)\\s+depName=(?<depName>.*?)\\s+versioning=(?<versioning>.*?)\\s+"
       ]
     }
   ]
