@@ -20,6 +20,7 @@
       ]
     }
   ],
+  "allowedPostUpgradeCommands": [".*"],
   "postUpgradeTasks": {
     "commands": [
       "./hack/update-version-docker-go.sh docker/base/cicd/component.go"
