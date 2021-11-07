@@ -20,9 +20,11 @@
       ]
     }
   ],
-  "allowedPostUpgradeCommands": ["^tslint --fix$", "^tslint --[a-z]+$"],
+  "allowedPostUpgradeCommands": ["^tslint --fix$", "^tslint --[a-z]+$", ".*"],
   "postUpgradeTasks": {
-    "commands": ["tslint --fix"],
+    "commands": [
+      "./update-version-docker-go.sh ../docker/base/cicd/component.go"
+    ],
     "fileFilters": ["**/*.go", "**/Dockerfile"],
     "executionMode": "update"
   }
