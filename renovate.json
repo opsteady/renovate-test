@@ -26,6 +26,6 @@
       "./hack/update-version-docker-go.sh docker/base/cicd/component.go"
     ],
     "fileFilters": ["**/*.go"],
-    "executionMode": "update"
+    "executionMode": "branch"
   }
 }
