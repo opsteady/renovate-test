@@ -1,5 +1,14 @@
 name: Renovate
-on: [push, workflow_dispatch]
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+    inputs:
+      reason:
+        description: "Reason"
+        required: false
+        default: "Check the versions"
 
 jobs:
   renovate:

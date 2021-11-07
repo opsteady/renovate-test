@@ -1,4 +1,4 @@
 FROM ubuntu:22.04
 
-# renovate: datasource=github-releases depName=hashicorp/vault versioning=semver
-ENV VAULT_VERSION=1.8.4
+# renovate: datasource=github-releases depName=hadolint/hadolint versioning=semver
+ENV HADOLINT_VERSION=v2.7.0
