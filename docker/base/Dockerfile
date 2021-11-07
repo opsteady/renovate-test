@@ -1,4 +1,4 @@
 FROM ubuntu:22.04
 
 # renovate: datasource=github-releases depName=hashicorp/packer versioning=semver
-ENV GOLINT_VERSION=1.1.0
+ENV GOLINT_VERSION=v1.7.8
