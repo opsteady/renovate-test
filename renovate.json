@@ -20,7 +20,7 @@
       ]
     }
   ],
-  "allowedPostUpgradeCommands": ["^tslint --fix$", "^tslint --[a-z]+$", ".*"],
+  "allowedPostUpgradeCommands": [".*"],
   "postUpgradeTasks": {
     "commands": [
       "./hack/update-version-docker-go.sh docker/base/cicd/component.go"
