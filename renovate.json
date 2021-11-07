@@ -20,12 +20,11 @@
       ]
     }
   ],
-  "allowedPostUpgradeCommands": [".*"],
   "postUpgradeTasks": {
     "commands": [
       "./hack/update-version-docker-go.sh docker/base/cicd/component.go"
     ],
-    "fileFilters": ["**/*.go", "**/Dockerfile"],
+    "fileFilters": ["**/*.go"],
     "executionMode": "update"
   }
 }
