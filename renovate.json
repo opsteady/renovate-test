@@ -23,7 +23,7 @@
   "allowedPostUpgradeCommands": ["^tslint --fix$", "^tslint --[a-z]+$"],
   "postUpgradeTasks": {
     "commands": ["tslint --fix"],
-    "fileFilters": ["docker/**"],
+    "fileFilters": ["*.go"],
     "executionMode": "update"
   }
 }
