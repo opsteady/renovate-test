@@ -16,8 +16,15 @@
       "fileMatch": ["(^|/)component.go$"],
       "matchStringsStrategy": "any",
       "matchStrings": [
-        "\\s+\"(?<currentValue>.*?)\".+\/\/ renovate: datasource=(?<datasource>.*?)\\s+registryUrl=(?<registryUrl>.*?)\\s+depName=(?<depName>.*?)\\s+versioning=(?<versioning>.*?)\\s+"
+        "\\s+\"(?<currentValue>.*?)\".+// renovate: datasource=(?<datasource>.*?)\\s+registryUrl=(?<registryUrl>.*?)\\s+depName=(?<depName>.*?)\\s+versioning=(?<versioning>.*?)\\s+"
       ]
     }
-  ]
+  ],
+  "postUpgradeTasks": {
+    "commands": [
+      "./hack/update-version-docker-go.sh docker/base/cicd/component.go"
+    ],
+    "fileFilters": ["docker/**"],
+    "executionMode": "update"
+  }
 }
