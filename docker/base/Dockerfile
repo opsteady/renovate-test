@@ -1,4 +1,4 @@
 FROM ubuntu:22.04
 
-# renovate: datasource=github-releases depName=Azure/azure-cli versioning=semver
-ENV AZURECLI_VERSION=2.27.2
+# renovate: datasource=github-releases depName=helm/helm versioning=semver
+ENV HELM_VERSION=v3.7.0
