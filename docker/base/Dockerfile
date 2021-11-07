@@ -1,4 +1,4 @@
 FROM ubuntu:22.04
 
-# renovate: datasource=github-releases depName=helm/helm versioning=semver
-ENV HELM_VERSION=v3.6.0
+# renovate: datasource=github-releases depName=hashicorp/vault versioning=semver
+ENV VAULT_VERSION=1.8.4
