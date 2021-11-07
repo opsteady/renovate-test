@@ -1,4 +1,4 @@
 FROM ubuntu:22.04
 
-# renovate: datasource=github-releases depName=kubernetes/kubernetes versioning=semver
-ENV KUBERENTES_VERSION=v1.22.1
+# renovate: datasource=github-tags depName=aws/aws-cli versioning=semver
+ENV AWSCLI_VERSION=2.3.3
