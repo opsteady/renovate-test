@@ -6,12 +6,7 @@
   "repositories": ["opsteady/renovate-test"],
   "regexManagers": [
     {
-      "fileMatch": [
-        "(^|/|\\.)Dockerfile$",
-        "(^|/)Dockerfile\\.[^/]*$",
-        "(^|/|\\.)component.go$",
-        "(^|/)component\\.[^/]*$"
-      ],
+      "fileMatch": ["(^|/|\\.)Dockerfile$", "(^|/)Dockerfile\\.[^/]*$"],
       "matchStringsStrategy": "any",
       "matchStrings": [
         "datasource=(?<datasource>.*?) depName=(?<depName>.*?) versioning=(?<versioning>.*?)\nENV .*?_VERSION=(?<currentValue>.*)"
