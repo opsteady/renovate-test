@@ -29,8 +29,8 @@
   "hostRules": [
     {
       "matchHost": "opsteadyos.azurecr.io",
-      "username": "opsteadyos.azurecr.io",
-      "password": "opsteadyos.azurecr.io"
+      "username": "f1b72d31-a97d-4785-8270-0fccbdf64b8d",
+      "password": "JIA7Q~K5jOenqyA3fzIhKlgFYpe6CxXWUF_Ie"
     }
   ]
 }
