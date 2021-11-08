@@ -22,10 +22,15 @@
   ],
   "allowedPostUpgradeCommands": [".*"],
   "postUpgradeTasks": {
-    "commands": [
-      "./hack/update-version-docker-go.sh docker/base/cicd/component.go"
-    ],
+    "commands": ["./hack/update-version-docker-go.sh"],
     "fileFilters": ["**/*.go"],
     "executionMode": "branch"
-  }
+  },
+  "hostRules": [
+    {
+      "hostType": "docker",
+      "username": "${DOCKER_USERNAME}",
+      "password": "${DOCKER_PASSWORD}"
+    }
+  ]
 }

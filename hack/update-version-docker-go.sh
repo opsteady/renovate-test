@@ -1,10 +1,25 @@
 #!/bin/bash
 
 # Find the version of the component in the docker folder and update it.
-# It requiers an argument which is the component.go file of one of the directories in the docker folder
-# It uses SetDockerBuildInfo function in go to find the version
+# Uses SetDockerBuildInfo function in go to find the version
 
-SOURCE_FILE=$1
+#git diff -s --exit-code main -- docker/base/Dockerfile
+SOURCE_FILE="empty"
+
+git diff -s --exit-code main -- docker/base/Dockerfile
+if [ $? -eq 1 ]; then
+  SOURCE_FILE="docker/base/cicd/component.go"
+fi
+
+git diff -s --exit-code main -- docker/cicd/Dockerfile
+if [ $? -eq 1 ]; then
+  SOURCE_FILE="docker/cicd/cicd/component.go"
+fi
+
+if [ "$SOURCE_FILE" == "empty" ]; then
+  echo "No changes detected stopping"
+  exit 0
+fi
 
 echo "Finding version in $SOURCE_FILE"
 ORIGINAL_VERSION=$(cat $SOURCE_FILE | grep SetDockerBuildInfo | awk -F"," '{print substr($2, 2)}' | awk '{print substr($0, 2, length($0) - 2)}')
