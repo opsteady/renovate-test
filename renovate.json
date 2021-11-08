@@ -25,5 +25,11 @@
     "commands": ["./hack/update-version-docker-go.sh"],
     "fileFilters": ["**/*.go"],
     "executionMode": "branch"
-  }
+  },
+  "packageRules": [
+    {
+      "managers": ["docker"],
+      "registryUrls": ["index.docker.io", "opsteadyos.azurecr.io"]
+    }
+  ]
 }
