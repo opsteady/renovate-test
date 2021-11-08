@@ -10,7 +10,7 @@ import (
 type DockerCicd struct {
 	component.DefaultComponent
 }
-
+//sig-storage/csi-attacher
 // Initialize creates a new DockerCicd struct
 func (d *DockerCicd) Initialize(defaultComponent component.DefaultComponent) {
 	d.DefaultComponent = defaultComponent
@@ -19,7 +19,7 @@ func (d *DockerCicd) Initialize(defaultComponent component.DefaultComponent) {
 		"FROM_IMAGE":               fmt.Sprintf(
 			"%s/%s",
 			d.GlobalConfig.ManagementDockerRegistry,
-			"1.0.0" // renovate: datasource=docker registryUrl=opsteadyos.azurecr.io depName=opsteadyos.azurecr.io/tigera/operator versioning=semver
+			"1.0.0" // renovate: datasource=docker registryUrl=opsteadyos.azurecr.io depName=opsteadyos.azurecr.io/sig-storage/csi-attacher versioning=semver
 		),
 		"VAULT_CA_STORAGE_ACCOUNT": d.GlobalConfig.VaultCaStorageAccountName,
 	}
