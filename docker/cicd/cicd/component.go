@@ -19,7 +19,7 @@ func (d *DockerCicd) Initialize(defaultComponent component.DefaultComponent) {
 		"FROM_IMAGE":               fmt.Sprintf(
 			"%s/%s",
 			d.GlobalConfig.ManagementDockerRegistry,
-			"1.0.0" // renovate: datasource=docker depName=opsteadyos.azurecr.io/sig-storage/csi-node-driver-registrar versioning=semver
+			"1.0.0" // renovate: datasource=docker registryUrl=opsteadyos.azurecr.io depName=opsteadyos.azurecr.io/sig-storage/csi-node-driver-registrar versioning=semver
 		),
 		"VAULT_CA_STORAGE_ACCOUNT": d.GlobalConfig.VaultCaStorageAccountName,
 	}
