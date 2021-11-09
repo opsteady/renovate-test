@@ -1,0 +1,29 @@
+name: Docker publish
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "docker/**"
+      - ".github/workflows/docker-validate.yml"
+      - ".github/workflows/docker-publish.yml"
+
+jobs:
+  publish:
+    runs-on: ubuntu-20.04
+    env:
+      VAULT_ADDRESS: https://vault.management.os.opsteady.com
+    permissions:
+      id-token: write
+      contents: read
+    container:
+      image: opsteadyos.azurecr.io/cicd:1.0.0 # versioning=semver datasource=docker
+      options: --user root
+      volumes:
+        - /var/run/docker.sock:/var/run/docker.sock
+      credentials:
+        username: ${{ secrets.acr_username }}
+        password: ${{ secrets.acr_password }}
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v2

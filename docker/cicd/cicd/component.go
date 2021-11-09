@@ -10,16 +10,17 @@ import (
 type DockerCicd struct {
 	component.DefaultComponent
 }
+
 //sig-storage/csi-node-driver-registrar
 // Initialize creates a new DockerCicd struct
 func (d *DockerCicd) Initialize(defaultComponent component.DefaultComponent) {
 	d.DefaultComponent = defaultComponent
 	d.Docker = "" // Use root of the folder
 	buildArgs := map[string]string{
-		"FROM_IMAGE":               fmt.Sprintf(
+		"FROM_IMAGE": fmt.Sprintf(
 			"%s/%s",
 			d.GlobalConfig.ManagementDockerRegistry,
-			"1.0.0" // renovate: datasource=docker registryUrl=opsteadyos.azurecr.io depName=opsteadyos.azurecr.io/sig-storage/csi-node-driver-registrar versioning=semver
+			"1.0.0", // renovate: datasource=docker registryUrl=opsteadyos.azurecr.io depName=opsteadyos.azurecr.io/base versioning=semver
 		),
 		"VAULT_CA_STORAGE_ACCOUNT": d.GlobalConfig.VaultCaStorageAccountName,
 	}
