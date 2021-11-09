@@ -20,7 +20,7 @@
       ]
     },
     {
-      "fileMatch": ["\\.github*$"],
+      "fileMatch": ["\\.github.*$"],
       "matchStringsStrategy": "any",
       "matchStrings": [
         ".*image: (?<depName>.*?):(?<currentValue>.*?) # versioning=(?<versioning>.*?) datasource=(?<datasource>.*?)\n"
